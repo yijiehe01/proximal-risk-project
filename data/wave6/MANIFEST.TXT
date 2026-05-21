@@ -1,0 +1,25 @@
+pbhepat6.sas7bdat (application/x-sas-system) 196608 bytes.
+WaveVIDemographicsPublic_UseCodebook.pdf (application/pdf) 1166923 bytes.
+WaveVIHepaticInjuryUserGuide.pdf (application/pdf) 855997 bytes.
+WaveVIMeasuresofGlucoseHomeostasisUserGuide.pdf (application/pdf) 676532 bytes.
+WaveVICardiovascularMeasuresPublic_UseCodebook.pdf (application/pdf) 1195120 bytes.
+WaveVIGlucoseHomeostasisPublic_UseCodebook.pdf (application/pdf) 1146433 bytes.
+Wave VI - Public-Use Weights Codebook.pdf (application/pdf) 882432 bytes.
+WaveVIAnthropometricsUserGuide.pdf (application/pdf) 705387 bytes.
+pbgluaic6.sas7bdat (application/x-sas-system) 262144 bytes.
+Wave VI Sampling Mixed-Mode Survey User Guide.pdf (application/pdf) 504272 bytes.
+WaveVILipidsUserGuide.pdf (application/pdf) 960353 bytes.
+pmeds6.sas7bdat (application/x-sas-system) 1835008 bytes.
+pblipids6.sas7bdat (application/x-sas-system) 524288 bytes.
+pcardio6.sas7bdat (application/x-sas-system) 589824 bytes.
+panthro6.sas7bdat (application/x-sas-system) 327680 bytes.
+Wave VI - Mixed-Mode Survey Public-Use Codebook.pdf (application/pdf) 4113811 bytes.
+WaveVICardiovascularMeasuresUserGuide.pdf (application/pdf) 557750 bytes.
+p6weight.sas7bdat (application/x-sas-system) 262144 bytes.
+WaveVIMedicationsPublic_UseCodebook.pdf (application/pdf) 1252873 bytes.
+WaveVILipidsPublic_UseCodebook.pdf (application/pdf) 1191457 bytes.
+WaveVIAnthropometricsPublic_UseCodebook.pdf (application/pdf) 1155763 bytes.
+pwave6.sas7bdat (application/x-sas-system) 32256000 bytes.
+pdemo6.sas7bdat (application/x-sas-system) 262144 bytes.
+WaveVIHepaticInjuryPublic_UseCodebook.pdf (application/pdf) 1125535 bytes.
+WaveVIHomeExamMedicationUseUserGuide.pdf (application/pdf) 663137 bytes.

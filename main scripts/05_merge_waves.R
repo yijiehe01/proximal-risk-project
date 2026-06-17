@@ -22,6 +22,7 @@ coded_vars <- c(
   "substance_count",
   "substance_frequency",
   "household_income",
+  "year",
   "violence_bin",
   "violence_frequency",
   "ipv_bin",

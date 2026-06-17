@@ -69,6 +69,63 @@ w1_data <- w1_data %>%
 table(w1_data$school_age, useNA = "always")
 
 # ----------------------------
+# YEAR
+# ----------------------------
+
+# w1
+table(w1_data$IYEAR, useNA = "always")
+w1_data <- w1_data %>%
+  mutate(
+    year = case_when(
+      IYEAR == 94 ~ 1994,
+      IYEAR == 95 ~ 1995
+    )
+  )
+table(w1_data$year, useNA = "always")
+
+# w2
+table(w2_data$IYEAR2, useNA = "always")
+w2_data <- w2_data %>%
+  mutate(
+    year = case_when(
+      IYEAR2 == 96 ~ 1996
+    )
+  )
+table(w2_data$year, useNA = "always")
+
+# w3
+table(w3_data$IYEAR3, useNA = "always")
+w3_data <- w3_data %>%
+  rename(
+    year = IYEAR3
+  )
+table(w3_data$year, useNA = "always")
+
+# w4
+table(w4_data$IYEAR4, useNA = "always")
+w4_data <- w4_data %>%
+  rename(
+    year = IYEAR4
+  )
+table(w4_data$year, useNA = "always")
+
+# w5
+table(w5_data$IYEAR5, useNA = "always")
+w5_data <- w5_data %>%
+  rename(
+    year = IYEAR5
+  )
+table(w5_data$year, useNA = "always")
+
+# w6
+table(w6_data$IYEAR6, useNA = "always")
+w6_data <- w6_data %>%
+  rename(
+    year = IYEAR6
+  )
+table(w6_data$year, useNA = "always")
+
+# ----------------------------
 # SEX
 # 0 = female, 1 = male
 # ----------------------------

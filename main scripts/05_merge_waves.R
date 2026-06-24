@@ -27,6 +27,7 @@ coded_vars <- c(
   "ssto_24",
   "ssth_24",
   "sst_24",
+  "sst_sport_24",
   "ct_24",
   "sport_24",
   "household_income",

@@ -35,6 +35,9 @@ addhealth_long2 <- addhealth_long2 %>%
     sport_24_mean = mean(sport_24, na.rm = TRUE),
     sport_24_wp = sport_24 - sport_24_mean,
 
+    sst_sport_24_mean = mean(sst_sport_24, na.rm = TRUE),
+    sst_sport_24_wp = sst_sport_24 - sport_24_mean,
+
     religion_mean = mean(religion, na.rm = TRUE),
     religion_wp = religion - religion_mean,
 
@@ -65,10 +68,8 @@ model1 <- glmmTMB(
     substance_count_wp +
     ust_24_mean +
     ust_24_wp +
-    sst_24_mean +
-    sst_24_wp +
-    sport_24_mean +
-    sport_24_wp +
+    sst_sport_24_mean +
+    sst_sport_24_wp +
     social_learning_max_ti +
     race_imputed +
     education_harmonized +
@@ -100,10 +101,8 @@ coef_labels <- c(
   "substance_count_wp" = "Substance use count (within)",
   "ust_24_mean" = "Unstructured spare time (between)",
   "ust_24_wp" = "Unstructured spare time (within)",
-  "sst_24_mean" = "Structured spare time (between)",
-  "sst_24_wp" = "Structured spare time (within)",
-  "sport_24_mean" = "Sports time (between)",
-  "sport_24_wp" = "Sports spare time (within)",
+  "sst_sport_24_mean" = "Structured spare time and sports (between)",
+  "sst_sport_24_wp" = "Structured spare time and sports (within)",
   "social_learning_max_ti" = "Social learning",
   "race_imputedAmerican Indian or Native American" = "American Indian/Native American",
   "race_imputedAsian or Pacific Islander" = "Asian/Pacific Islander",
@@ -131,11 +130,11 @@ modelsummary(
   exponentiate = TRUE,
   coef_map = coef_labels,
   statistic = "conf.int",
-  stars = c("*" = .05, "**" = .01, "***" = .001),
+  stars = c("†" = .10, "*" = .05, "**" = .01, "***" = .001),
   add_rows = tibble::tribble(
     ~term, ~`IPV frequency`,
-    "Respondents", "4,433",
-    "Person-wave observations", "12,598",
+    "Respondents", "4,434",
+    "Person-wave observations", "12,612",
     "Waves", "III–VI",
     "Random intercept", "Yes"
   ),

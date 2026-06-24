@@ -154,19 +154,3 @@ social_learning_lookup <- addhealth_long2 %>%
 addhealth_long2 <- addhealth_long2 %>%
   left_join(social_learning_lookup, by = "AID")
 
-
-
-
-
-
-
-summary(addhealth_long2)
-
-table(addhealth_long2$imprisonment, addhealth_long2$imprisonment_harmonized)
-
-
-
-
-
-
-

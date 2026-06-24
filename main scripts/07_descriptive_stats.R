@@ -42,11 +42,19 @@ ggplot(
 
 #Time use age curves
 addhealth_long2 %>%
-  select(age_imputed, ust_24, sst_24, ct_24, sport_24) %>%
+  select(age_imputed, ust_24, sst_sport_24, ct_24) %>%
   pivot_longer(
-    cols = c(ust_24, sst_24, ct_24, sport_24),
+    cols = c(ust_24, sst_sport_24, ct_24),
     names_to = "activity",
     values_to = "hours"
+  ) %>%
+  mutate(
+    activity = recode(
+      activity,
+      "ust_24" = "Unstructured spare time",
+      "sst_sport_24" = "Structured spare time\nand sports",
+      "ct_24" = "Committed time"
+    )
   ) %>%
   filter(
     !is.na(age_imputed),

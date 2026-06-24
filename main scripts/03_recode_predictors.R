@@ -2536,6 +2536,7 @@ w1_data <- w1_data %>%
   mutate(
     total = rowSums(across(c(usto, usth, ssto, ssth, ct, sport)), na.rm = TRUE),
     sst = rowSums(across(c(ssto, ssth)), na.rm = TRUE),
+    sst_sport = rowSums(across(c(ssto, ssth, sport)), na.rm = TRUE),
     ust = rowSums(across(c(usto, usth)), na.rm = TRUE),
     n_valid = rowSums(!is.na(across(c(usto, usth, ssto, ssth, ct, sport)))),
     total = if_else(n_valid == 0 | total == 0, NA_real_, total),
@@ -2548,6 +2549,7 @@ w1_data <- w1_data %>%
     sst_24   = sst / total * 24,
     ct_24    = ct / total * 24,
     sport_24 = sport / total * 24,
+    sst_sport_24 = sst_sport / total * 24,
 
     total_24 = rowSums(across(c(usto_24, usth_24, ssto_24, ssth_24, ct_24, sport_24)), na.rm = TRUE),
     total_24 = if_else(is.na(total), NA_real_, total_24)
@@ -2559,6 +2561,7 @@ w2_data <- w2_data %>%
   mutate(
     total = rowSums(across(c(usto, usth, ssto, ssth, ct, sport)), na.rm = TRUE),
     sst = rowSums(across(c(ssto, ssth)), na.rm = TRUE),
+    sst_sport = rowSums(across(c(ssto, ssth, sport)), na.rm = TRUE),
     ust = rowSums(across(c(usto, usth)), na.rm = TRUE),
     n_valid = rowSums(!is.na(across(c(usto, usth, ssto, ssth, ct, sport)))),
     total = if_else(n_valid == 0 | total == 0, NA_real_, total),
@@ -2571,6 +2574,7 @@ w2_data <- w2_data %>%
     sst_24   = sst / total * 24,
     ct_24    = ct / total * 24,
     sport_24 = sport / total * 24,
+    sst_sport_24 = sst_sport / total * 24,
 
     total_24 = rowSums(across(c(usto_24, usth_24, ssto_24, ssth_24, ct_24, sport_24)), na.rm = TRUE),
     total_24 = if_else(is.na(total), NA_real_, total_24)
@@ -2582,6 +2586,7 @@ w3_data <- w3_data %>%
   mutate(
     total = rowSums(across(c(usto, usth, ssto, ssth, ct, sport)), na.rm = TRUE),
     sst = rowSums(across(c(ssto, ssth)), na.rm = TRUE),
+    sst_sport = rowSums(across(c(ssto, ssth, sport)), na.rm = TRUE),
     ust = rowSums(across(c(usto, usth)), na.rm = TRUE),
     n_valid = rowSums(!is.na(across(c(usto, usth, ssto, ssth, ct, sport)))),
     total = if_else(n_valid == 0 | total == 0, NA_real_, total),
@@ -2594,6 +2599,7 @@ w3_data <- w3_data %>%
     sst_24   = sst / total * 24,
     ct_24    = ct / total * 24,
     sport_24 = sport / total * 24,
+    sst_sport_24 = sst_sport / total * 24,
 
     total_24 = rowSums(across(c(usto_24, usth_24, ssto_24, ssth_24, ct_24, sport_24)), na.rm = TRUE),
     total_24 = if_else(is.na(total), NA_real_, total_24)
@@ -2605,6 +2611,7 @@ w4_data <- w4_data %>%
   mutate(
     total = rowSums(across(c(usto, usth, ssto, ssth, ct, sport)), na.rm = TRUE),
     sst = rowSums(across(c(ssto, ssth)), na.rm = TRUE),
+    sst_sport = rowSums(across(c(ssto, ssth, sport)), na.rm = TRUE),
     ust = rowSums(across(c(usto, usth)), na.rm = TRUE),
     n_valid = rowSums(!is.na(across(c(usto, usth, ssto, ssth, ct, sport)))),
     total = if_else(n_valid == 0 | total == 0, NA_real_, total),
@@ -2617,6 +2624,7 @@ w4_data <- w4_data %>%
     sst_24   = sst / total * 24,
     ct_24    = ct / total * 24,
     sport_24 = sport / total * 24,
+    sst_sport_24 = sst_sport / total * 24,
 
     total_24 = rowSums(across(c(usto_24, usth_24, ssto_24, ssth_24, ct_24, sport_24)), na.rm = TRUE),
     total_24 = if_else(is.na(total), NA_real_, total_24)
@@ -2628,6 +2636,7 @@ w5_data <- w5_data %>%
   mutate(
     total = rowSums(across(c(usto, usth, ssto, ssth, ct, sport)), na.rm = TRUE),
     sst = rowSums(across(c(ssto, ssth)), na.rm = TRUE),
+    sst_sport = rowSums(across(c(ssto, ssth, sport)), na.rm = TRUE),
     ust = rowSums(across(c(usto, usth)), na.rm = TRUE),
     n_valid = rowSums(!is.na(across(c(usto, usth, ssto, ssth, ct, sport)))),
     total = if_else(n_valid == 0 | total == 0, NA_real_, total),
@@ -2640,6 +2649,7 @@ w5_data <- w5_data %>%
     sst_24   = sst / total * 24,
     ct_24    = ct / total * 24,
     sport_24 = sport / total * 24,
+    sst_sport_24 = sst_sport / total * 24,
 
     total_24 = rowSums(across(c(usto_24, usth_24, ssto_24, ssth_24, ct_24, sport_24)), na.rm = TRUE),
     total_24 = if_else(is.na(total), NA_real_, total_24)
@@ -2651,6 +2661,7 @@ w6_data <- w6_data %>%
   mutate(
     total = rowSums(across(c(usto, usth, ssto, ssth, ct, sport)), na.rm = TRUE),
     sst = rowSums(across(c(ssto, ssth)), na.rm = TRUE),
+    sst_sport = rowSums(across(c(ssto, ssth, sport)), na.rm = TRUE),
     ust = rowSums(across(c(usto, usth)), na.rm = TRUE),
     n_valid = rowSums(!is.na(across(c(usto, usth, ssto, ssth, ct, sport)))),
     total = if_else(n_valid == 0 | total == 0, NA_real_, total),
@@ -2663,6 +2674,7 @@ w6_data <- w6_data %>%
     sst_24   = sst / total * 24,
     ct_24    = ct / total * 24,
     sport_24 = sport / total * 24,
+    sst_sport_24 = sst_sport / total * 24,
 
     total_24 = rowSums(across(c(usto_24, usth_24, ssto_24, ssth_24, ct_24, sport_24)), na.rm = TRUE),
     total_24 = if_else(is.na(total), NA_real_, total_24)
